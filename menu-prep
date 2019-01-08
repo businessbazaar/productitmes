@@ -1,0 +1,17 @@
+
+
+
+
+commands
+
+cat /tmp/list | grep -v Availability: | grep -v Add | grep -v '[0-9]\{2\}.[0-9]\{2\}' | grep -v '[0-9]\{1\}.[0-9]\{2\}'
+
+
+cat /tmp/ser | grep -v Availability: | grep -v Add | grep -v '[0-9]\{2\}.[0-9]\{2\}' | grep -v '[0-9]\{1\}.[0-9]\{2\}'
+
+
+curl -X POST      -H "Authorization: Bearer "$(gcloud auth application-default print-access-token)      -H "Content-Type: application/json; charset=utf-8"      --data "{
+  'q': 'Hello world',
+  'q': 'My name is Jeff',
+  'target': 'de'
+}" "https://translation.googleapis.com/language/translate/v2"
